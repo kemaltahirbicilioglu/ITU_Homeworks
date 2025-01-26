@@ -1,0 +1,31 @@
+- init:
+        run: rm -f runner
+        visible: true
+
+- build:
+    run: g++ -Wall -Werror quadruply.cpp -o runner  # timeout: 20
+    exit: 0
+    points: 1
+    blocker: true
+
+- case_1:
+        run: ./runner input_xsmall.csv ops_xsmall.csv # timeout: 20
+        exit: 0
+        blocker: true
+- test_1:
+        run: diff --strip-trailing-cr ./expected_output_xsmall.csv ./quadruply_output.csv
+        exit: 0
+        points: 1
+
+- case_2:
+        run: ./runner input_small.csv ops_small.csv # timeout: 20
+        exit: 0
+        blocker: true
+- test_2:
+        run: diff --strip-trailing-cr ./expected_output_small.csv ./quadruply_output.csv
+        exit: 0
+        points: 1
+
+- out:
+        run: rm -f runner.o runner
+        visible: false

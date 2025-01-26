@@ -1,0 +1,54 @@
+- init:
+          run: rm -f main
+          visible: true
+
+- build:
+          run: g++ -Wall -Werror ../main.cpp -o main # timeout: 10
+          exit: 0
+          blocker: true
+
+- case_1:
+          run: ./main dataset1.csv operations_1_1.csv # timeout: 60
+          script:
+                  - expect: 'ERROR: An invalid ID to delete\r\nERROR: An invalid ID to update\r\nERROR: An invalid ID to update\r\nERROR: An invalid ID to update\r\nERROR: An invalid ID to update\r\n' #timeout: 60
+                  - expect: _EOF_ # timeout: 60
+          exit: 0
+          blocker: true
+- case_1_file:
+          run: diff --strip-trailing-cr ./expected_output_1_1.csv ./output.csv
+          exit: 0
+
+- case_2:
+          run: ./main dataset1.csv operations_1_2.csv # timeout: 90
+          script:
+                  - expect: 'ERROR: An invalid ID to delete\r\nERROR: An invalid ID to delete\r\nERROR: An invalid ID to delete\r\nERROR: An invalid ID to update\r\nERROR: An invalid ID to delete\r\n' #timeout: 90
+                  - expect: _EOF_ # timeout: 90
+          blocker: true
+- case_2_file:
+          run: diff --strip-trailing-cr ./expected_output_1_2.csv ./output.csv
+          exit: 0
+
+- case_3:
+          run: ./main dataset2.csv operations_2_1.csv # timeout: 1200
+          script:
+                  - expect: "ERROR: An invalid ID to update\r\nERROR: An invalid ID to update\r\nERROR: An invalid ID to update\r\nERROR: An invalid ID to delete\r\nERROR: An invalid ID to update\r\n" #timeout: 1200
+                  - expect: _EOF_ # timeout: 1200
+          exit: 0
+          blocker: true
+- case_3_file:
+          run: diff --strip-trailing-cr ./expected_output_2_1.csv ./output.csv
+          exit: 0
+
+- case_4:
+          run: ./main dataset2.csv operations_2_2.csv # timeout: 1200
+          script:
+                  - expect: "ERROR: An invalid ID to update\r\nERROR: An invalid ID to delete\r\nERROR: An invalid ID to update\r\nERROR: An invalid ID to update\r\nERROR: An invalid ID to update\r\n" #timeout: 1200
+                  - expect: _EOF_ # timeout: 1200
+          blocker: true
+- case_4_file:
+          run: diff --strip-trailing-cr ./expected_output_2_2.csv ./output.csv
+          exit: 0
+
+- out:
+          run: rm -f main.o main
+          visible: false

@@ -1,0 +1,186 @@
+- init:
+        run: rm -f main
+        visible: true
+
+- build:
+        run: g++ -Wall -Werror ../main.cpp -o main # timeout: 3
+        exit: 0
+        blocker: true
+
+- test_tree_op1:
+        run: ./main minidataset.csv tree_op1.csv # timeout: 3
+        script:
+              - expect: "P\r\n" # timeout: 3
+              - expect: "7;700;1\r\n" # timeout: 3
+              - expect: "6;600;1\r\n" # timeout: 3
+              - expect: "2;200;1\r\n" # timeout: 3
+              - expect: "1;100;1\r\n" # timeout: 3
+              - expect: "4;400;1\r\n" # timeout: 3
+              - expect: "3;300;1\r\n" # timeout: 3
+              - expect: "5;500;1\r\n" # timeout: 3
+              - expect: "9;900;1\r\n" # timeout: 3
+              - expect: "8;800;1\r\n" # timeout: 3
+              - expect: "10;1000;1\r\n" # timeout: 3
+              - expect: "11;1100;1\r\n" # timeout: 3
+              - expect: "H 5\r\n" # timeout: 3
+              - expect: "P\r\n" # timeout: 3
+              - expect: "7;700;1\r\n" # timeout: 3
+              - expect: "6;600;1\r\n" # timeout: 3
+              - expect: "2;200;1\r\n" # timeout: 3
+              - expect: "1;100;1\r\n" # timeout: 3
+              - expect: "4;400;1\r\n" # timeout: 3
+              - expect: "3;300;1\r\n" # timeout: 3
+              - expect: "5;500;1\r\n" # timeout: 3
+              - expect: "9;900;1\r\n" # timeout: 3
+              - expect: "8;800;1\r\n" # timeout: 3
+              - expect: "10;1000;1\r\n" # timeout: 3
+              - expect: "11;1100;1\r\n" # timeout: 3
+              - expect: "12;1200;1\r\n" # timeout: 3
+              - expect: "H 5\r\n" # timeout: 3
+              - expect: "P\r\n" # timeout: 3
+              - expect: "7;700;1\r\n" # timeout: 3
+              - expect: "6;600;1\r\n" # timeout: 3
+              - expect: "2;200;1\r\n" # timeout: 3
+              - expect: "1;100;1\r\n" # timeout: 3
+              - expect: "4;400;1\r\n" # timeout: 3
+              - expect: "3;333;1\r\n" # timeout: 3
+              - expect: "5;500;1\r\n" # timeout: 3
+              - expect: "9;900;1\r\n" # timeout: 3
+              - expect: "8;800;1\r\n" # timeout: 3
+              - expect: "10;1000;1\r\n" # timeout: 3
+              - expect: "11;1100;1\r\n" # timeout: 3
+              - expect: "12;1200;1\r\n" # timeout: 3
+              - expect: "P\r\n" # timeout: 3
+              - expect: "7;700;1\r\n" # timeout: 3
+              - expect: "6;600;1\r\n" # timeout: 3
+              - expect: "2;200;1\r\n" # timeout: 3
+              - expect: "1;100;1\r\n" # timeout: 3
+              - expect: "4;400;1\r\n" # timeout: 3
+              - expect: "3;333;1\r\n" # timeout: 3
+              - expect: "5;500;1\r\n" # timeout: 3
+              - expect: "9;900;1\r\n" # timeout: 3
+              - expect: "8;800;1\r\n" # timeout: 3
+              - expect: "10;1000;1\r\n" # timeout: 3
+              - expect: "12;1200;1\r\n" # timeout: 3
+              - expect: "P\r\n" # timeout: 3
+              - expect: "8;800;1\r\n" # timeout: 3
+              - expect: "6;600;1\r\n" # timeout: 3
+              - expect: "2;200;1\r\n" # timeout: 3
+              - expect: "1;100;1\r\n" # timeout: 3
+              - expect: "4;400;1\r\n" # timeout: 3
+              - expect: "3;333;1\r\n" # timeout: 3
+              - expect: "5;500;1\r\n" # timeout: 3
+              - expect: "9;900;1\r\n" # timeout: 3
+              - expect: "10;1000;1\r\n" # timeout: 3
+              - expect: "12;1200;1\r\n" # timeout: 3
+              - expect: _EOF_ # timeout: 3
+
+- test_tree_op2:
+        run: ./main minidataset.csv tree_op2.csv # timeout: 3
+        script:
+              - expect: "P\r\n" # timeout: 3
+              - expect: "7;700;1\r\n" # timeout: 3
+              - expect: "6;600;1\r\n" # timeout: 3
+              - expect: "2;200;1\r\n" # timeout: 3
+              - expect: "1;100;1\r\n" # timeout: 3
+              - expect: "4;400;1\r\n" # timeout: 3
+              - expect: "3;300;1\r\n" # timeout: 3
+              - expect: "5;500;1\r\n" # timeout: 3
+              - expect: "9;900;1\r\n" # timeout: 3
+              - expect: "8;800;1\r\n" # timeout: 3
+              - expect: "10;1000;1\r\n" # timeout: 3
+              - expect: "11;1100;1\r\n" # timeout: 3
+              - expect: "12;1200;1\r\n" # timeout: 3
+              - expect: "13;1300;1\r\n" # timeout: 3
+              - expect: "H 6\r\n" # timeout: 3
+              - expect: "P\r\n" # timeout: 3
+              - expect: "7;700;1\r\n" # timeout: 3
+              - expect: "6;600;1\r\n" # timeout: 3
+              - expect: "3;300;1\r\n" # timeout: 3
+              - expect: "1;100;1\r\n" # timeout: 3
+              - expect: "4;400;1\r\n" # timeout: 3
+              - expect: "5;500;1\r\n" # timeout: 3
+              - expect: "9;900;1\r\n" # timeout: 3
+              - expect: "8;800;1\r\n" # timeout: 3
+              - expect: "10;1000;1\r\n" # timeout: 3
+              - expect: "11;1100;1\r\n" # timeout: 3
+              - expect: "12;1200;1\r\n" # timeout: 3
+              - expect: "13;1300;1\r\n" # timeout: 3
+              - expect: "H 6\r\n" # timeout: 3
+              - expect: "P\r\n" # timeout: 3
+              - expect: "7;700;1\r\n" # timeout: 3
+              - expect: "6;600;1\r\n" # timeout: 3
+              - expect: "3;300;1\r\n" # timeout: 3
+              - expect: "1;100;1\r\n" # timeout: 3
+              - expect: "4;400;1\r\n" # timeout: 3
+              - expect: "5;555;1\r\n" # timeout: 3
+              - expect: "9;900;1\r\n" # timeout: 3
+              - expect: "8;800;1\r\n" # timeout: 3
+              - expect: "10;1000;1\r\n" # timeout: 3
+              - expect: "11;1100;1\r\n" # timeout: 3
+              - expect: "12;1200;1\r\n" # timeout: 3
+              - expect: "13;1300;1\r\n" # timeout: 3
+              - expect: "H 6\r\n" # timeout: 3
+              - expect: "H 5\r\n" # timeout: 3
+              - expect: "P\r\n" # timeout: 3
+              - expect: "8;800;1\r\n" # timeout: 3
+              - expect: "6;600;1\r\n" # timeout: 3
+              - expect: "3;300;1\r\n" # timeout: 3
+              - expect: "1;100;1\r\n" # timeout: 3
+              - expect: "4;400;1\r\n" # timeout: 3
+              - expect: "5;555;1\r\n" # timeout: 3
+              - expect: "10;1000;1\r\n" # timeout: 3
+              - expect: "13;1300;1\r\n" # timeout: 3
+              - expect: "H 5\r\n" # timeout: 3
+              - expect: "P\r\n" # timeout: 3
+              - expect: "8;800;1\r\n" # timeout: 3
+              - expect: "6;600;1\r\n" # timeout: 3
+              - expect: "5;555;1\r\n" # timeout: 3
+              - expect: "10;1000;1\r\n" # timeout: 3
+              - expect: "13;1300;1\r\n" # timeout: 3
+              - expect: "H 3\r\n" # timeout: 3
+              - expect: "P\r\n" # timeout: 3
+              - expect: "13;1300;1\r\n" # timeout: 3
+              - expect: "H 1\r\n" # timeout: 3
+              - expect: "P\r\n" # timeout: 3
+              - expect: "H 0\r\n" # timeout: 3
+              - expect: _EOF_ # timeout: 3
+
+- test_tree_op3:
+        run: ./main minidataset.csv tree_op3.csv # timeout: 3
+        script:
+              - expect: "P\r\n" # timeout: 3
+              - expect: "8;800;1\r\n" # timeout: 3
+              - expect: "2;200;1\r\n" # timeout: 3
+              - expect: "1;100;1\r\n" # timeout: 3
+              - expect: "4;400;1\r\n" # timeout: 3
+              - expect: "3;300;1\r\n" # timeout: 3
+              - expect: "9;900;1\r\n" # timeout: 3
+              - expect: "10;1000;1\r\n" # timeout: 3
+              - expect: "11;1100;1\r\n" # timeout: 3
+              - expect: "ERROR: An invalid ID to delete\r\n" # timeout: 3
+              - expect: "ERROR: An invalid ID to delete\r\n" # timeout: 3
+              - expect: "P\r\n" # timeout: 3
+              - expect: "8;800;1\r\n" # timeout: 3
+              - expect: "2;200;1\r\n" # timeout: 3
+              - expect: "1;1;1\r\n" # timeout: 3
+              - expect: "4;400;1\r\n" # timeout: 3
+              - expect: "3;300;1\r\n" # timeout: 3
+              - expect: "9;900;1\r\n" # timeout: 3
+              - expect: "10;1000;1\r\n" # timeout: 3
+              - expect: "11;1100;1\r\n" # timeout: 3
+              - expect: "ERROR: An invalid ID to update\r\n" # timeout: 3
+              - expect: "P\r\n" # timeout: 3
+              - expect: "8;800;1\r\n" # timeout: 3
+              - expect: "2;200;1\r\n" # timeout: 3
+              - expect: "1;1;1\r\n" # timeout: 3
+              - expect: "4;400;1\r\n" # timeout: 3
+              - expect: "3;333;1\r\n" # timeout: 3
+              - expect: "9;900;1\r\n" # timeout: 3
+              - expect: "10;1000;1\r\n" # timeout: 3
+              - expect: "11;1100;1\r\n" # timeout: 3
+              - expect: _EOF_ # timeout: 3
+
+- out:
+        run: rm -f main.o main
+        visible: false
