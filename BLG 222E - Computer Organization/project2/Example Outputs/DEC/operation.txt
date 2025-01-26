@@ -1,0 +1,1 @@
+DEC R2, R1 (initial value of R1 is 10)

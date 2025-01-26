@@ -1,0 +1,1 @@
+MOVH R1, 0x0A (initial R1 value is 0x0A)

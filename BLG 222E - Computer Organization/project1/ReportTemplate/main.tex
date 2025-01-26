@@ -1,0 +1,101 @@
+\documentclass[pdftex,12pt,a4paper]{article}
+
+\usepackage{graphicx}  
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{breakcites}
+\usepackage{indentfirst}
+\usepackage{pgfgantt}
+\usepackage{pdflscape}
+\usepackage{float}
+\usepackage{epsfig}
+\usepackage{epstopdf}
+\usepackage[cmex10]{amsmath}
+\usepackage{stfloats}
+\usepackage{multirow}
+
+\renewcommand{\refname}{REFERENCES}
+\linespread{1.3}
+
+\usepackage{mathtools}
+%\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\thispagestyle{empty}
+\begin{document}
+\begin{titlepage}
+\begin{center}
+\textbf{}\\
+\textbf{\Large{ISTANBUL TECHNICAL UNIVERSITY}}\\
+\vspace{0.5cm}
+\textbf{\Large{COMPUTER ENGINEERING DEPARTMENT}}\\
+\vspace{4cm}
+\textbf{\Large{BLG 222E\\ COMPUTER ORGANIZATION\\ PROJECT 1 REPORT}}\\
+\vspace{4cm}
+\begin{table}[ht]
+\centering
+\Large{
+\begin{tabular}{lcl}
+\textbf{CRN}  & : & 11111 \\
+\textbf{LECTURER}  & : & Prof. Dr. John Doe \\
+\end{tabular}}
+\end{table}
+\vspace{1cm}
+\textbf{\Large{GROUP MEMBERS:}}\\
+\begin{table}[ht]
+\centering
+\Large{
+\begin{tabular}{rcl}
+150160000  & : & STUDENT NAME SURNAME \\
+150160001  & : & STUDENT NAME SURNAME \\
+\end{tabular}}
+\end{table}
+\vspace{2.8cm}
+\textbf{\Large{SPRING 2024}}
+
+\end{center}
+
+\end{titlepage}
+
+\thispagestyle{empty}
+\addtocontents{toc}{\contentsline {section}{\numberline {}FRONT COVER}{}}
+\addtocontents{toc}{\contentsline {section}{\numberline {}CONTENTS}{}}
+\setcounter{tocdepth}{4}
+\tableofcontents
+\clearpage
+
+\setcounter{page}{1}
+
+\section{INTRODUCTION [10 points]}
+
+Briefly describe what you have done during the project.
+
+\section{MATERIALS AND METHODS [40 points]}
+Answer all questions and provide everything that is indicated in the “Submission” section in “Project 1 Homework File”.
+Edit following sub-heading as you wish.
+
+\subsection{FIRST HEADER}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.5\textwidth]{logo.png}	
+	\caption{An Example Figure Caption\cite{ref1}}
+	\label{fig1}
+\end{figure}
+
+\subsection{SECOND HEADER}
+
+
+\section{RESULTS [15 points]}
+Give your results what you get during the project. You can also add the table, image, etc. 
+
+\section{DISCUSSION [25 points]}
+Please explain, analyze, and interpret what you have done during the project. 
+
+\section{CONCLUSION [10 points]}
+Comment on any difficulties you have faced, what you have learned etc.
+
+\newpage
+\addcontentsline{toc}{section}{\numberline {}REFERENCES}
+
+\bibliographystyle{unsrt}
+\bibliography{reference}
+
+\end{document}
+

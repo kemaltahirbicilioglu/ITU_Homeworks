@@ -1,0 +1,148 @@
+------------------------------------
+Register Simulation Started
+[PASS] Test No: 1, Component: Q, Actual Value: 0x0025, Expected Value: 0x0025
+[PASS] Test No: 2, Component: Q, Actual Value: 0x0024, Expected Value: 0x0024
+[PASS] Test No: 3, Component: Q, Actual Value: 0x0025, Expected Value: 0x0025
+[PASS] Test No: 4, Component: Q, Actual Value: 0x0026, Expected Value: 0x0026
+[PASS] Test No: 5, Component: Q, Actual Value: 0x0025, Expected Value: 0x0025
+[PASS] Test No: 6, Component: Q, Actual Value: 0x0012, Expected Value: 0x0012
+[PASS] Test No: 7, Component: Q, Actual Value: 0x0025, Expected Value: 0x0025
+[PASS] Test No: 8, Component: Q, Actual Value: 0x0000, Expected Value: 0x0000
+Register Simulation Finished
+------------------------------------
+
+
+
+------------------------------------
+RegisterFile Simulation Started
+[PASS] Test No: 1, Component: OutA, Actual Value: 0x1234, Expected Value: 0x1234
+[PASS] Test No: 1, Component: OutB, Actual Value: 0x5678, Expected Value: 0x5678
+[PASS] Test No: 2, Component: OutA, Actual Value: 0x1234, Expected Value: 0x1234
+[PASS] Test No: 2, Component: OutB, Actual Value: 0x3548, Expected Value: 0x3548
+RegisterFile Simulation Finished
+------------------------------------
+
+
+
+------------------------------------
+AddressRegisterFile Simulation Started
+[PASS] Test No: 1, Component: OutC, Actual Value: 0x1234, Expected Value: 0x1234
+[PASS] Test No: 1, Component: OutD, Actual Value: 0x5678, Expected Value: 0x5678
+[PASS] Test No: 2, Component: OutA, Actual Value: 0x1234, Expected Value: 0x1234
+[PASS] Test No: 2, Component: OutB, Actual Value: 0x3548, Expected Value: 0x3548
+AddressRegisterFile Simulation Finished
+------------------------------------
+
+
+
+------------------------------------
+InstructionRegister Simulation Started
+[PASS] Test No: 1, Component: IROut, Actual Value: 0x2315, Expected Value: 0x2315
+[PASS] Test No: 2, Component: IROut, Actual Value: 0x1567, Expected Value: 0x1567
+InstructionRegister Simulation Finished
+------------------------------------
+
+
+
+------------------------------------
+ArithmeticLogicUnit Simulation Started
+[PASS] Test No: 1, Component: ALUOut, Actual Value: 0x5555, Expected Value: 0x5555
+[PASS] Test No: 1, Component: Z, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 1, Component: C, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 1, Component: N, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 1, Component: O, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 2, Component: ALUOut, Actual Value: 0x5555, Expected Value: 0x5555
+[PASS] Test No: 2, Component: Z, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 2, Component: C, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 2, Component: N, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 2, Component: O, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 3, Component: ALUOut, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 3, Component: Z, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 3, Component: C, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 3, Component: N, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 3, Component: O, Actual Value: 0x0000, Expected Value: 0x0000
+ArithmeticLogicUnit Simulation Finished
+------------------------------------
+
+
+
+------------------------------------
+ArithmeticLogicUnitSystem Simulation Started
+[PASS] Test No: 1, Component: OutA, Actual Value: 0x7777, Expected Value: 0x7777
+[PASS] Test No: 1, Component: OutB, Actual Value: 0x8887, Expected Value: 0x8887
+[PASS] Test No: 1, Component: ALUOut, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 1, Component: Z, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 1, Component: C, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 1, Component: N, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 1, Component: O, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 1, Component: MuxAOut, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 1, Component: MuxBOut, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 1, Component: MuxCOut, Actual Value: 0x00fe, Expected Value: 0x00fe
+[PASS] Test No: 1, Component: R2, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 1, Component: S3, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 2, Component: OutA, Actual Value: 0x7777, Expected Value: 0x7777
+[PASS] Test No: 2, Component: OutB, Actual Value: 0x8887, Expected Value: 0x8887
+[PASS] Test No: 2, Component: ALUOut, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 2, Component: Z, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 2, Component: C, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 2, Component: N, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 2, Component: O, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 2, Component: MuxAOut, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 2, Component: MuxBOut, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 2, Component: MuxCOut, Actual Value: 0x00fe, Expected Value: 0x00fe
+[PASS] Test No: 2, Component: R2, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 2, Component: S3, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 2, Component: PC, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 3, Component: OutC, Actual Value: 0x1254, Expected Value: 0x1254
+[PASS] Test No: 3, Component: Address, Actual Value: 0x0023, Expected Value: 0x0023
+[PASS] Test No: 3, Component: Memout, Actual Value: 0x0015, Expected Value: 0x0015
+[PASS] Test No: 3, Component: IROut, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 4, Component: OutC, Actual Value: 0x1254, Expected Value: 0x1254
+[PASS] Test No: 4, Component: Address, Actual Value: 0x0023, Expected Value: 0x0023
+[PASS] Test No: 4, Component: Memout, Actual Value: 0x0015, Expected Value: 0x0015
+[PASS] Test No: 4, Component: IROut, Actual Value: 0x0015, Expected Value: 0x0015
+ArithmeticLogicUnitSystem Simulation Finished
+------------------------------------
+
+
+
+------------------------------------
+ArithmeticLogicUnitSystem Simulation Started
+[PASS] Test No: 1, Component: OutA, Actual Value: 0x7777, Expected Value: 0x7777
+[PASS] Test No: 1, Component: OutB, Actual Value: 0x8887, Expected Value: 0x8887
+[PASS] Test No: 1, Component: ALUOut, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 1, Component: Z, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 1, Component: C, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 1, Component: N, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 1, Component: O, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 1, Component: MuxAOut, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 1, Component: MuxBOut, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 1, Component: MuxCOut, Actual Value: 0x00fe, Expected Value: 0x00fe
+[PASS] Test No: 1, Component: R2, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 1, Component: S3, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 2, Component: OutA, Actual Value: 0x7777, Expected Value: 0x7777
+[PASS] Test No: 2, Component: OutB, Actual Value: 0x8887, Expected Value: 0x8887
+[PASS] Test No: 2, Component: ALUOut, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 2, Component: Z, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 2, Component: C, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 2, Component: N, Actual Value: 0x0001, Expected Value: 0x0001
+[PASS] Test No: 2, Component: O, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 2, Component: MuxAOut, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 2, Component: MuxBOut, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 2, Component: MuxCOut, Actual Value: 0x00fe, Expected Value: 0x00fe
+[PASS] Test No: 2, Component: R2, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 2, Component: S3, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 2, Component: PC, Actual Value: 0xfffe, Expected Value: 0xfffe
+[PASS] Test No: 3, Component: OutC, Actual Value: 0x1254, Expected Value: 0x1254
+[PASS] Test No: 3, Component: Address, Actual Value: 0x0023, Expected Value: 0x0023
+[PASS] Test No: 3, Component: Memout, Actual Value: 0x0015, Expected Value: 0x0015
+[PASS] Test No: 3, Component: IROut, Actual Value: 0x0000, Expected Value: 0x0000
+[PASS] Test No: 4, Component: OutC, Actual Value: 0x1254, Expected Value: 0x1254
+[PASS] Test No: 4, Component: Address, Actual Value: 0x0023, Expected Value: 0x0023
+[PASS] Test No: 4, Component: Memout, Actual Value: 0x0015, Expected Value: 0x0015
+[PASS] Test No: 4, Component: IROut, Actual Value: 0x0015, Expected Value: 0x0015
+ArithmeticLogicUnitSystem Simulation Finished
+------------------------------------
+
+
+

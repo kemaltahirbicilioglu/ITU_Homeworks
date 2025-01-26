@@ -1,0 +1,1 @@
+XOR R3, R1, R2 (initial values for R1 and R2 are 9 and 6 respectively)

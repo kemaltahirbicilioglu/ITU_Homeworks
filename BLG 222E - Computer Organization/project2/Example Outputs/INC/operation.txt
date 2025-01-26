@@ -1,0 +1,1 @@
+INC R2, R1 (initial R1 value is 10)
