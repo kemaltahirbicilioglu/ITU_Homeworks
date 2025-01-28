@@ -1,0 +1,18 @@
+FROM ubuntu:oracular
+
+ENV LANG=C.UTF-8
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN sed -i 's/archive\.ubuntu\.com/ftp.linux.org.tr/g' /etc/apt/sources.list
+RUN apt-get -y update
+RUN apt-get -y --fix-missing --no-install-recommends install 
+RUN apt-get -y --with-new-pkgs --no-install-recommends upgrade 
+
+RUN apt install build-essential -y
+RUN apt install gdb -y
+
+RUN apt update
+RUN apt install valgrind
+
+RUN apt update
+RUN apt install git -y
