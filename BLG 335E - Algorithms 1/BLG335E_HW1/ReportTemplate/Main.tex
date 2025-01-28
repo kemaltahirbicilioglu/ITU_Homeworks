@@ -1,0 +1,141 @@
+%-------------------------------------------------------------------------------
+% TEMPLATE FOR ITU HWs and Assignments
+% (c) Javad Ibrahimli, 2023
+
+% This is a template for a HWs document, created by JAVAD IBRAHIMLI.
+% All rights are reserved. 
+%------------------------------------------------------------------------------- 
+
+
+% ------------------ DOCUMENT SETUP ------------------ 
+% The document class defines the document type (report) and sets the font size (12pt)
+\documentclass[12pt]{report}
+\author{Meral Kuyucu}
+
+
+% Inputs the Document Packages
+\input{_Packages}
+
+% Controls how many subsections the document can take
+%  and how many of those will get put into the contents pages.
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+% Line Spacing
+\setstretch{1.2}
+
+
+% Places a dot after Chapter/Section/Subsection number in Table of Contents
+\renewcommand{\cftchapaftersnum}{.}
+\renewcommand{\cftsecaftersnum}{.}
+\renewcommand{\cftsubsecaftersnum}{.}
+
+%  Customize Dot spacing in Table of Contents/List of Figures/Tables
+\renewcommand{\cftdotsep}{0.3}
+
+
+% Line Break Properties
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+
+% Formatting Table of Contents/Lists titles
+\renewcommand{\contentsname}{\bfseries\LARGE{CONTENTS}}
+\renewcommand{\listfigurename}{\bfseries\LARGE{LIST OF FIGURES}}
+
+% Signature Line for the declaration
+\newbox\namebox
+\newdimen\signboxdim
+
+\def\signature#1{%
+    \setbox\namebox=\hbox{#1}
+    \signboxdim=\dimexpr(\wd\namebox+3cm)
+    \parbox[t]{\signboxdim}{%
+        \centering
+            \hrulefill\\    % for a line
+            #1
+        \par}%
+    }
+
+% Title Formatting customization
+\titleformat{\chapter}{\normalfont\bfseries\LARGE}{\thechapter.}{1em}{}
+\titlespacing*{\chapter} {0pt} {0pt} {5pt} % 
+
+\titleformat{\section}{\normalfont\bfseries\large}{\thesection.}{1em}{}
+\titlespacing*{\section} {0pt} {5pt} {5pt} % left, before, after
+
+\titleformat{\subsection}{\normalfont\bfseries\large}{\thesubsection.}{1em}{}
+\titlespacing*{\subsection} {0pt} {10pt} {10pt}
+
+\titleformat{\subsubsection}{\normalfont\bfseries\large}{\thesubsubsection.}{1em}{}
+\titlespacing*{\subsubsection} {0pt} {10pt} {10pt}
+
+
+% HEADER AND FOOTER
+\pagestyle{fancy}  % Set Page Style (Header and Footer Style)
+\fancyhf{}  % Clears the header and footer (from the default info)
+
+% Header
+\renewcommand{\headrulewidth}{0pt}  % Removes the default Horizontal Line in Header
+% Optional Headers
+%\fancyhead[L]{}
+%\fancyhead[R]{2022/2023}
+
+% Footer
+\fancyfoot[C]{\thepage} % Page Number
+
+% Change figure numbering per section
+\numberwithin{figure}{chapter}
+
+%  -------------------------------------------------
+%  --------- The document starts from here --------- 
+%  -------------------------------------------------
+
+\begin{document}
+
+
+% ------------------  TITLE PAGE -------------------
+\begin{titlepage}
+\begin{center}
+    % UCL IMAGE
+    \vspace*{-3cm}
+    \makebox[\textwidth]{\includegraphics[width=\paperwidth]{Images/check1.png}}
+    
+    \vspace{2.3cm}
+    
+
+    \vspace{1cm}
+    {\relscale{2.00}\textbf{Analysis of Algorithms\\}}
+    \vspace{0.3cm}
+    {\relscale{1.35}\textbf{BLG 335E\\}}
+    \vspace{2.4cm}
+    
+    {\relscale{2.00}{Project 1 Report}}\\
+    %\vspace{0.1cm}
+    %\vspace{0.1cm}
+    YOUR NAME HERE \\ \href{mailto:ITUIDHERE@itu.edu.tr}{ITUIDHERE@itu.edu.tr}\\
+    \vspace{0.9cm}
+
+\end{center}
+{\raggedleft\vfill{\begin{singlespace}
+     Faculty of Computer and Informatics Engineering\\
+\end{singlespace}
+ Department of Computer Engineering\\
+ \begin{singlespace}
+ Date of submission: DATE HERE\\
+ 
+ 
+ \end{singlespace}
+}\par
+}
+\end{titlepage}
+
+\newpage
+
+% ---- CONTENT ----
+\chapter{Implementation}
+\input{ReportBody} 
+
+\end{document}

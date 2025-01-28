@@ -1,0 +1,5 @@
+{
+    "name": "c-dev-env",
+    "extensions": ["ms-vscode.cpptools", "ms-vscode.cpptools-extension-pack"],
+    "dockerFile": "dockerfile"
+}

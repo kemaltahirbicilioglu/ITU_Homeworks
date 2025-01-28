@@ -1,0 +1,69 @@
+\label{implementation}
+
+\section{Sorting Strategies for Large Datasets}
+
+Apply ascending search with the algorithms you implemented on the data expressed in the header rows of Tables \ref{dataPermutation} and \ref{dataSize}. Provide the execution time in the related cells. Make sure to provide the unit. 
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+                        & \textbf{tweets} & \textbf{tweetsSA} & \textbf{tweetsSD} & \textbf{tweetsNS} \\ \hline
+\textbf{Bubble Sort}   &                    & & &                    \\ \hline
+
+\textbf{Insertion Sort}   &                    & & &                    \\ \hline
+\textbf{Merge Sort}   &                    & & &                    \\ \hline
+
+\end{tabular}
+\caption{Comparison of different sorting algorithms on input data (Same Size, Different Permutations). }
+\label{dataPermutation}
+\end{table}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+                        & \textbf{5K} & \textbf{10K} & \textbf{20K} & \textbf{30K} & \textbf{40K} & \textbf{50K} \\ \hline
+\textbf{Bubble Sort} & & & & & & \\ \hline
+\textbf{Insertion Sort} & & & & & & \\ \hline
+\textbf{Merge Sort} & & & & & & \\ \hline
+\end{tabular}
+\caption{Comparison of different sorting algorithms on input data (Different Size). }
+\label{dataSize}
+\end{table}
+
+\subsection*{Discuss your results}
+Answer here. 
+
+\section{Targeted Searches and Key Metrics}
+
+Run a binary search for the index 1773335. Search for the number of tweets with more than 250 favorites on the datasets given in the header row of Table \ref{dataSizeMetric}. Provide the execution time in the related cells. Make sure to provide the unit. 
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+                        & \textbf{5K} & \textbf{10K} & \textbf{20K} & \textbf{30K} & \textbf{40K} & \textbf{50K} \\ \hline
+\textbf{Binary Search} & & & & & & \\ \hline
+\textbf{Threshold} & & & & & & \\ \hline
+\end{tabular}
+\caption{Comparison of different metric algorithms on input data (Different Size). }
+\label{dataSizeMetric}
+\end{table}
+
+\subsection*{Discuss your results}
+Answer here. 
+
+\section{Discussion Questions}
+
+\subsection*{Discuss the methods you've implemented and the complexity of those methods.}
+Answer here. 
+
+\subsection*{What are the limitations of binary search? Under what conditions can it not be applied, and why?}
+Answer here. 
+
+\subsection*{How does merge sort perform on edge cases, such as an already sorted dataset or a dataset where all tweet counts are the same? Is there any performance improvement or degradation in these cases?}
+Answer here. 
+
+\subsection*{Were there any notable performance differences when sorting in ascending versus descending order? Why do you think this occurred or didn’t occur?}
+Answer here. 
