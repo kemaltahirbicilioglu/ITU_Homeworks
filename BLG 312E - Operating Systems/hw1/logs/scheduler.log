@@ -1,0 +1,17 @@
+[00:00:00] [INFO] Forking new process for jobA
+[00:00:00] [INFO] Executing jobA (PID: 4474) using exec
+[00:00:03] [INFO] jobA ran for 3 seconds. Time slice expired - Sending SIGSTOP
+[00:00:03] [INFO] Forking new process for jobB
+[00:00:03] [INFO] Executing jobB (PID: 4475) using exec
+[00:00:06] [INFO] jobB ran for 3 seconds. Time slice expired - Sending SIGSTOP
+[00:00:06] [INFO] Resuming jobA (PID: 4474) - SIGCONT
+[00:00:09] [INFO] jobA completed execution. Terminating (PID: 4474)
+[00:00:09] [INFO] Forking new process for jobC
+[00:00:09] [INFO] Executing jobC (PID: 4476) using exec
+[00:00:12] [INFO] jobC ran for 3 seconds. Time slice expired - Sending SIGSTOP
+[00:00:12] [INFO] Resuming jobB (PID: 4475) - SIGCONT
+[00:00:15] [INFO] jobB ran for 3 seconds. Time slice expired - Sending SIGSTOP
+[00:00:15] [INFO] Resuming jobC (PID: 4476) - SIGCONT
+[00:00:16] [INFO] jobC completed execution. Terminating (PID: 4476)
+[00:00:16] [INFO] Resuming jobB (PID: 4475) - SIGCONT
+[00:00:19] [INFO] jobB completed execution. Terminating (PID: 4475)

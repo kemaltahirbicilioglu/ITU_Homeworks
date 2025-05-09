@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Scheduler",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/scheduler",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "preLaunchTask": "build debug"
+        }
+    ]
+}
